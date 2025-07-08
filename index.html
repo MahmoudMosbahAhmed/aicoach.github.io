@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-shapes" id="floatingShapes"></div>
+    
+    <div class="service-status" id="serviceStatus">
+        <span class="status-indicator status-healthy" id="statusIndicator"></span>
+        <span id="statusText">Connecting...</span>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1>🚀 AI Career Coach</h1>
+            <p>AI-Powered Job Recommendations & Learning Paths</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2>
+                    <span class="icon">👤</span>
+                    Your Profile
+                </h2>
+                
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="userIdInput">User ID</label>
+                        <input type="text" id="userIdInput" placeholder="Enter your User ID">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skillsInput">Your Skills</label>
+                        <input type="text" id="skillsInput" placeholder="Type a skill and press Enter">
+                        <div class="skills-input" id="skillsList"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interestsInput">Interests</label>
+                        <input type="text" id="interestsInput" placeholder="Type an interest and press Enter">
+                        <div class="skills-input" id="interestsList"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="coursesInput">Completed Courses</label>
+                        <input type="text" id="coursesInput" placeholder="Type a course and press Enter">
+                        <div class="skills-input" id="coursesList"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experienceLevel">Experience Level</label>
+                        <select id="experienceLevel">
+                            <option value="entry">Entry Level</option>
+                            <option value="intermediate" selected>Intermediate</option>
+                            <option value="senior">Senior Level</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredDomains">Preferred Domains</label>
+                        <input type="text" id="preferredDomains" placeholder="Type domains and press Enter">
+                        <div class="skills-input" id="domainsList"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn" id="getRecommendationsBtn">
+                        Get AI Recommendations
+                    </button>
+                </form>
+            </div>
+            
+            <div class="card">
+                <h2>
+                    <span class="icon">🎯</span>
+                    Your Recommendations
+                </h2>
+                
+                <div id="recommendationsContainer">
+                    <p class="placeholder-text">
+                        Fill out your profile to get personalized job recommendations powered by AI!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="learningPathModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Learning Path</h2>
+                <button class="close-modal" id="closeModalBtn">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
