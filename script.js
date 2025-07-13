@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    const AI_SERVICE_BASE_URL = "http://localhost:8040/api/v1/ai";
+    const AI_SERVICE_BASE_URL = "https://dev-coach.upscend.com/api/v1/ai";
 
     // --- DOM ELEMENTS ---
     const getRecommendationsBtn = document.getElementById('getRecommendationsBtn');
